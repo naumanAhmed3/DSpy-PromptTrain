@@ -1,6 +1,7 @@
+import os
 import dspy
 import dspy.predict
-lm = dspy.LM('openai/gpt-3.5-turbo', api_key='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')
+lm = dspy.LM('openai/gpt-3.5-turbo', api_key=os.environ["OPENAI_API_KEY"])
 dspy.configure(lm=lm)
 
 
